@@ -1,0 +1,19 @@
+<div class="loading-errconn-panel" [class.hideErrorLoading]="!(errorConnection || loading)">
+    @if(loading){
+      <div class="loading-container">
+        <p><i class="fa-solid fa-circle-notch"></i></p>
+      </div>
+      <p class="loading-txt">Contactandose con el servidor...</p>
+    }
+  
+    @if (errorConnection) {
+      <div class="error-conn-panel">
+        <div class="error-conn-icon">
+          <div><i class="fa-solid fa-circle-exclamation"></i></div>
+        </div>
+        <div class="error-conn-msg">
+          <p>No se pudo establecer una conexión con el servidor. <br> Por favor, intentelo mas tarde.</p>
+        </div>
+      </div>
+    }
+</div>

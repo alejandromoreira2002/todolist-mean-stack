@@ -1,0 +1,18 @@
+<div class="activities-container" id="activities-container">
+    @for (activity of activities; track activity.id) {
+        <div class="activity-section">
+            <label>
+                <input #checkAct type="checkbox" [checked]="activity.done" (change)="doActivity(activity.id, checkAct.checked)">
+                <p style="display:inline" id="act-txt" [class.done]="activity.done">{{activity.detail}}</p>
+            </label>
+            <div class="desktop-edit-btns">
+                <button class="edit-btns edit-btn" id="edit-btn" (click)="editActivity(activity.id)">
+                    <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
+                </button>
+                <button class="edit-btns delete-btn" id="delete-btn" (click)="deleteActivity(activity.id)">
+                    <i class="fa-solid fa-trash" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    }
+</div>

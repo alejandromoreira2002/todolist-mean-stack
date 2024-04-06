@@ -1,0 +1,8 @@
+**/todolist-app/node_modules
+
+BACKEND/todolist-app/.env
+BACKEND/todolist-app/api.rest
+BACKEND/todolist-app/tests
+BACKEND/todolist-app/package-lock.json
+
+FRONTEND/todolist-app/package-lock.json

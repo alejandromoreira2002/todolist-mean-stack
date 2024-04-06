@@ -1,0 +1,14 @@
+<div id = "msg-error-container" class="msg-error-container" [class.appear] ="!!errorMsg">
+    <button id="close-error-panel" class="close-error-panel" (click)="errorMsg=undefined"><i class="fa-solid fa-xmark"></i></button>
+    <p id="error-text" class="error-text">{{errorMsg}}</p>
+</div>
+<div class="form-container">
+    <h1>¡Sign up into your Account!</h1>
+    <form [formGroup]="signupForm" (ngSubmit)="signup()" id="register-form">
+        <input type="text" class="elem-register-display input-register-form" id="register-username" formControlName="username" placeholder="Username">
+        <input type="email" class="elem-register-display input-register-form" id="register-email" formControlName="email" placeholder="Email">
+        <input type="password" class="elem-register-display input-register-form" id="register-password" formControlName="password" placeholder="Password">
+        <input type="submit" class="elem-register-display submit-register-form" id="submit-register-form" value="Register" [disabled]="!signupForm.valid">
+    </form>
+    <p>Do you have an account? <a routerLink="/login" class="link-login">Log in</a></p>
+</div>

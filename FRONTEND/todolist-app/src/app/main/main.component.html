@@ -1,0 +1,25 @@
+<app-advices></app-advices>
+
+@if (editValue) {
+  <div class="edit-info-panel" id="edit-info-panel">
+    <div class="edit-info-container">
+        <button id="close-edit-panel" class="close-edit-panel" (click)="editValue=undefined"><i class="fa-solid fa-circle-xmark"></i></button>
+        <input type="text" id="edit-info-input" class="edit-info-input" placeholder="Edit your todo activity" [value]="editValue.detail" #editInput>
+        <button id="edit-info-check" class="edit-info-check" (click)="editActivity(editValue.id, editInput.value)"><i class="fa-solid fa-circle-check"></i></button>
+    </div>
+    <p class="error-edit-msg" id="error-edit-msg" [class.showError]="errorMsgs['edit']">* Porfavor rellene el campo</p>
+  </div>
+}
+
+<div class="container-logout">
+  <button class="button-logout" (click)="logout()" title="Log out"><i class="fa-solid fa-right-from-bracket"></i></button>
+</div>
+<h1>ToDo App</h1>
+<div class="activity-entry-container">
+  <div class="activity-entry-content">
+    <input type="text" id="activity-entry" class="activity-entry" placeholder="Write a todo activity" #detailAct (keypress)="showTecla($event, detailAct.value); $event.key=='Enter'?detailAct.value='':0">
+    <button id="btn-add-activity" class="btn-add-activity" (click) = "addActivity(detailAct.value); detailAct.value=''"><i class="fa-solid fa-plus"></i></button>
+  </div>
+  <p class="error-msg" [class.showError]="errorMsgs['add']">* El campo esta vacío</p>
+</div>
+<app-activities (editItemEvent)="onEdit($event)" [activities]="activities"></app-activities>

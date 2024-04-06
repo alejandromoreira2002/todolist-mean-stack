@@ -1,0 +1,61 @@
+.activities-container{
+    margin: 0 50px;
+    font-size: 13pt;
+    font-weight: 500;
+}
+
+.activity-section{
+    position: relative;
+    margin: 20px 0;
+    width: 100%;
+    height: 28px;
+}
+
+.activity-section::after{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+    content: '';
+    height: 1px;
+    width: 85%;
+    background-image: linear-gradient(to right, rgba(185, 185, 185, .5), rgb(185, 185, 185), rgba(185, 185, 185, .5));
+}
+
+.activity-section input{
+    margin-right: 5px;
+}
+
+.done{
+    color: rgb(120, 120, 120);
+    text-decoration: line-through;
+}
+
+.desktop-edit-btns{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.edit-btns{
+    border: none;
+    background-color: rgba(194, 194, 194, 0);
+    border-radius: 5px;
+    padding: 0 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 15pt;
+}
+
+.edit-btns:hover{
+    background-color: rgba(194, 194, 194, .5);
+}
+
+.edit-btn{
+    color: rgb(221, 184, 20);
+}
+
+.delete-btn{
+    color: rgb(219, 14, 14);
+}

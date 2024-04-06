@@ -1,0 +1,26 @@
+/*****************
+* Created by: Teddy Alejandro Moreira Velez
+* A todo App is an application to
+* register Todo Activities :D
+*****************/
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --color-fg: rgb(61, 61, 61);
+    --color-bg: rgb(224, 224, 224);
+    --color-fg2: rgb(121,121,121);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    width: 100%;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+}

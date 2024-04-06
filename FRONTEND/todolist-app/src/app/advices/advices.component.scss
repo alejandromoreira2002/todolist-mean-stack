@@ -1,0 +1,92 @@
+.loading-errconn-panel{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 100;
+}
+
+.error-conn-panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 14pt;
+}
+
+.error-conn-icon{
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.error-conn-icon div{
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 7em;
+    color: #ed5555;
+}
+
+.error-conn-msg{
+    max-width: 90%;
+    /*height: 20%;*/
+    text-align: center;
+}
+
+.error-conn-msg p{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #555
+}
+
+.loading-container p{
+    font-size: 40pt;
+    color: #ffffff;
+    animation-name: loading;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.loading-txt{
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: 15pt;
+    font-weight: 500;
+}
+
+.hideErrorLoading{
+    animation-name: hide;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hide{
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes loading{
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
